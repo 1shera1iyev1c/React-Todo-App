@@ -4,7 +4,7 @@ import { List, Item } from "./components";
 function App() {
 
   const [allTodo, setAllTodo] = useState([])
-  const count = Math.round(Math.random()*10000)
+  const count = allTodo.at(0)?.id ? allTodo.at(0)?.id + 1 : 1 
 
   const handleAddTodo = (evt) => {
     if (evt.target.value) {
